@@ -117,20 +117,22 @@ $products = [
                 <h1 class="text-warning">OOP Shop</h1>
                 <h4 class="text-warning">l'e-commerce minimale essenziale</h4>
             </div>
-                <?php foreach ($products as $product) { ?>
-                    <div class="col-3">
-                        <div class="card">
-                            <img src="<?php echo $product->img ?>" class="card-img-top" alt="<?php echo $product->title ?>">
-                            <div class="card-body">
-                                <h5 class="card-title"><?php echo $product->title ?></h5>
-                                <p class="card-text">Prezzo: <?php echo $product->price ?> </p>
-                                <p class="card-text">Ideale per: <?php echo $product->category->name ?> </p>
-                                <p class="card-text">Tipologia: <?php echo $product->type ?> </p>
-                                <a href="#" class="btn btn-primary">Scopri di più</a>
-                            </div>
+            <?php foreach ($products as $product) { ?>
+                <div class="col-3">
+                    <div class="card text-bg-light mb-3">
+                        <img src="<?php echo $product->img ?>" class="card-img-top" alt="<?php echo $product->title ?>">
+                        <div class="card-body">
+                            <h5 class="card-title"><?php echo $product->title ?></h5>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Prezzo: <?php echo $product->price ?> </li>
+                                <li class="list-group-item">Ideale per: <?php echo $product->category->name ?> </li>
+                                <li class="list-group-item">Tipologia: <?php echo $product->type ?> </li>
+                            </ul>
+                            <a href="#" class="btn btn-primary mt-3">Compralo compulsivamente</a>
                         </div>
                     </div>
-                <?php } ?>
+                </div>
+            <?php } ?>
         </div>
     </div>
 </body>
